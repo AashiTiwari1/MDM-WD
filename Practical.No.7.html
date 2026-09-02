@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-[#EF9393] via-[#998EE0] to-[#8BDEDA] flex items-center justify-center p-4">
+
+    <div class="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-2xl">
+
+        <h1 class="text-3xl font-bold text-center text-[#998EE0] mb-2">
+            GlowUp Portal
+        </h1>
+
+        <p class="text-center text-gray-600 mb-6">
+            Frequently Asked Questions
+        </p>
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-4 bg-gradient-to-r from-[#43ADD0] to-[#998EE0] text-white rounded-lg font-semibold">
+                What products are available?
+            </button>
+
+            <p class="answer hidden p-4 bg-[#f5f0ff] text-gray-700 rounded-b-lg">
+                We offer perfumes, skincare products, lipsticks, and beauty accessories.
+            </p>
+        </div>
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-4 bg-gradient-to-r from-[#43ADD0] to-[#998EE0] text-white rounded-lg font-semibold">
+                Are the products suitable for all skin types?
+            </button>
+
+            <p class="answer hidden p-4 bg-[#f5f0ff] text-gray-700 rounded-b-lg">
+                Most of our skincare products are suitable for different skin types. Please check the product details before purchasing.
+            </p>
+        </div>
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-4 bg-gradient-to-r from-[#43ADD0] to-[#998EE0] text-white rounded-lg font-semibold">
+                How long does delivery take?
+            </button>
+
+            <p class="answer hidden p-4 bg-[#f5f0ff] text-gray-700 rounded-b-lg">
+                Orders are usually delivered within 3–7 working days.
+            </p>
+        </div>
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-4 bg-gradient-to-r from-[#43ADD0] to-[#998EE0] text-white rounded-lg font-semibold">
+                Can I return a product?
+            </button>
+
+            <p class="answer hidden p-4 bg-[#f5f0ff] text-gray-700 rounded-b-lg">
+                Yes, eligible products can be returned according to our return policy.
+            </p>
+        </div>
+
+
+    </div>
+
+    <script>
+        let questions = document.querySelectorAll(".question");
+
+        questions.forEach(function(question) {
+            question.addEventListener("click", function() {
+                let answer = question.nextElementSibling;
+                answer.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+</body>
+</html>
